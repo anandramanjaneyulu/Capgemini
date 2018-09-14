@@ -11,6 +11,18 @@ add mobileno number(20);
 
 ----------------------------------------------------------------------------PayRoll--------------------------------------------------------------------------
 
+create table associate(
+associateid varchar(20) not null,
+yearlyinvestmentunder80c number(20) not null,
+firstname varchar(20) not null,
+lastname varchar(20) not null,
+department varchar(20) not null,
+designation varchar(10) not null,
+pancard varchar(10) not null,
+emailid varchar(20) not null);
+
+
+
 create table bankdetails
 (accountnumber number(20) not null,
 bankname varchar(20) not null,
