@@ -72,7 +72,7 @@ transactionstatus  varchar(10) not null);
 -----------------------------------mobilebilling------------------------------------------------------------------------
 create table plan
 (planid number(20) not null,
-monthlyrental
+monthlyrental number(20) not null,
 
 
 
