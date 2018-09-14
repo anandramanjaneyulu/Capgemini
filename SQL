@@ -61,9 +61,20 @@ accounttype varchar(10) not null);
 
 create table transaction
 (transactionid number(20) not null,
-timestamp timestamp not null,
+timestamp number not null,
 amount number(10) not null,
 transactiontype varchar(10) not null,
 transactionlocation varchar(10) not null,
 modeoftransaction varchar(10) not null,
 transactionstatus  varchar(10) not null);
+
+
+-----------------------------------mobilebilling------------------------------------------------------------------------
+create table plan
+(planid number(20) not null,
+monthlyrental
+
+
+
+
+
