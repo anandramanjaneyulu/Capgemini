@@ -205,5 +205,28 @@ insert into address values('amaravathi','andhrapradesh',522906,'India');
 
 
 
+----------------------------------------------------------------account------------------------------------------------------------------
+insert into account values(302201501230,500,'Savings');
+
+insert into account values(302201501231,3330,'Current');
+
+insert into account values(302201501232,690,'Savings');
+
+insert into account values(302201501233,10,'Savings');
+
+insert into account values(302201501234,6009,'Current');
+
+insert into account values(302201501235,10000,'Savings');
+
+insert into account values(302201501236,39996,'Current');
+
+insert into account values(302201501237,46339,'Savings');
+
+insert into account values(302201501238,1600,'Savings');
+
+insert into account values(302201501239,12000,'Current');
+
+
+
 
 
