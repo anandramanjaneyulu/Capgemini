@@ -73,6 +73,11 @@ transactionstatus  varchar(10) not null);
 create table plan
 (planid number(20) not null,
 monthlyrental number(20) not null,
+freelocalcalls number(20) not null,
+freelocalstdcalls number(20) not null,
+freelocalsms number(20) not null,
+freestdsms number(20) not null,
+
 
 
 
