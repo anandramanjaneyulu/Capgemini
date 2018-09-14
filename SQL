@@ -170,23 +170,23 @@ insert into Associate
 -----------------------------------------------------------customer details-------------------------------------------------
 insert into customer values(1,'subhash','g',9553306410,'subhash@capgemini.com',307730456548,'ABCDE1234F',TO_DATE('1997/08/30', 'yyyy/mm/dd'));
 
-insert into customer values(2,'raj','k',9553306411,'raj@capgemini.com',307730456549,'ABCDE1235F',TO_DATE('1997-07-30', 'yyyy/mm/dd'));
+insert into customer values(2,'raj','k',9553306411,'raj@capgemini.com',307730456549,'ABCDE1235F',TO_DATE('1997/07/30', 'yyyy/mm/dd'));
 
-insert into customer values(3,'anand','b',9553346410,'anand@capgemini.com',307730456448,'ABCDE1244F',TO_DATE('1997-10-30', 'yyyy/mm/dd'));
+insert into customer values(3,'anand','b',9553346410,'anand@capgemini.com',307730456448,'ABCDE1244F',TO_DATE('1997/10/30', 'yyyy/mm/dd'));
 
-insert into customer values(4,'mahesh','p',9553309410,'mahesh@capgemini.com',307330456548,'ABCDG1234F',TO_DATE('1995-08-30', 'yyyy/mm/dd'));
+insert into customer values(4,'mahesh','p',9553309410,'mahesh@capgemini.com',307330456548,'ABCDG1234F',TO_DATE('1995/08/30', 'yyyy/mm/dd'));
 
-insert into customer values(5,'kaushal','army',9753306410,'kaushal@capgemini.com',317730456548,'ATCDE1234F',TO_DATE('1997-08-30', 'yyyy/mm/dd'));
+insert into customer values(5,'kaushal','army',9753306410,'kaushal@capgemini.com',317730456548,'ATCDE1234F',TO_DATE('1997/08/30', 'yyyy/mm/dd'));
 
-insert into customer values(6,'nutan','navy',9153306410,'nutan@capgemini.com',327730456548,'AZCDE1234F',TO_DATE('1994-08-10', 'yyyy/mm/dd'));
+insert into customer values(6,'nutan','navy',9153306410,'nutan@capgemini.com',327730456548,'AZCDE1234F',TO_DATE('1994/08/10', 'yyyy/mm/dd'));
 
-insert into customer values(7,'amit','air',9253306410,'amit@capgemini.com',337730456548,'ASCDE1234F',TO_DATE('1993-05-20', 'yyyy/mm/dd'));
+insert into customer values(7,'amit','air',9253306410,'amit@capgemini.com',337730456548,'ASCDE1234F',TO_DATE('1993/05/20', 'yyyy/mm/dd'));
 
-insert into customer values(8,'roll','rida',9353306410,'roll@capgemini.com',347730456548,'AJCDE1234F',TO_DATE('1993-11-20', 'yyyy/mm/dd'));
+insert into customer values(8,'roll','rida',9353306410,'roll@capgemini.com',347730456548,'AJCDE1234F',TO_DATE('1993/11/20', 'yyyy/mm/dd'));
 
-insert into customer values(9,'geetha','bang',9453306410,'geetha@capgemini.com',357730456548,'AVCDE1234F',TO_DATE('1996-07-20', 'yyyy/mm/dd'));
+insert into customer values(9,'geetha','bang',9453306410,'geetha@capgemini.com',357730456548,'AVCDE1234F',TO_DATE('1996/07/20', 'yyyy/mm/dd'));
 
-insert into customer values(10,'chill','hill',9953306410,'chill@capgemini.com',367730456548,'AMCDE1234F',TO_DATE('1997-03-11', 'yyyy/mm/dd'));
+insert into customer values(10,'chill','hill',9953306410,'chill@capgemini.com',367730456548,'AMCDE1234F',TO_DATE('1997/03/11', 'yyyy/mm/dd'));
 
 
 
