@@ -270,7 +270,7 @@ insert into transaction values(789456123012,'2018/09/12 9:23:46',10000,'CARD','P
 insert into transaction values(897456123023,'2018/09/1 4:3:46',45000,'UPI','MUMBAI','ONLINE BANKING','PENDING');
 insert into transaction values(986541237812,'2018/09/2 9:23:46',12000,'DEPOSIT','CHENNAI','RTGS','APPROVED');
 insert into transaction values(456789445666,'2018/08/2 9:03:46',52000,'POS','PUNE',IMPS','PENDING');
-insert into transaction values(456789445566,'2018/07/12 9:23:46',16000,'CARD','CHENNAI','IMPS','APPROVED','PENDING');
+insert into transaction values(456789445566,'2018/07/12 9:23:46',16000,'CARD','CHENNAI','IMPS','APPROVED');
 insert into transaction values(456789445126,'2018/09/12 9:23:46',51000,'WITHDRAWL','MUMBAI','RTGS','PENDING');
 insert into transaction values(456789445786,'2018/09/12 9:23:06',40000,'UPI','PUNE','RTGS','APPROVED');
 insert into transaction values(456789444566,'2018/09/12 19:23:46',40000,'POS','MUMBAI','RTGS','PENDING');
