@@ -77,6 +77,12 @@ freelocalcalls number(20) not null,
 freelocalstdcalls number(20) not null,
 freelocalsms number(20) not null,
 freestdsms number(20) not null,
+freeinternetdatausageunits number(20) not null,
+localcallrate number(20) not null,
+stdcallrate number(20) not null,
+localsmsrate number(20) not null,
+stdsmsrate number(20) not null,
+internetdatausagerate number(20) not null);
 
 
 
