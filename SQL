@@ -57,8 +57,8 @@ netsalary number(10) not null);
 
 
 create table address
-(city varchar(10) not null,
-state varchar(10) not null,
+(city varchar(20) not null,
+state varchar(20) not null,
 pincode number(10) not null,
 country varchar(10) not null);
 
