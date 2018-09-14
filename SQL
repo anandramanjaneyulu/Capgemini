@@ -190,5 +190,20 @@ insert into customer values(10,'chill','hill',9953306410,'chill@capgemini.com',3
 
 
 
+-----------------------------------------------------------address------------------------------------------------------------------------
+
+insert into address values('Guntur','andhrapradesh',522006,'India');
+insert into address values('Guntakal','andhrapradesh',522021,'India');
+insert into address values('ponnur','andhrapradesh',522035,'India');
+insert into address values('vizag','andhrapradesh',522001,'India');
+insert into address values('bhimavaram','andhrapradesh',522007,'India');
+insert into address values('nellore','andhrapradesh',522100,'India');
+insert into address values('piduguralla','andhrapradesh',522106,'India');
+insert into address values('macharla','andhrapradesh',522796,'India');
+insert into address values('Hyderabad','andhrapradesh',522156,'India');
+insert into address values('amaravathi','andhrapradesh',522906,'India');
+
+
+
 
 
