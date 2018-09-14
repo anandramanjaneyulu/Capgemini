@@ -227,6 +227,27 @@ insert into account values(302201501238,1600,'Savings');
 insert into account values(302201501239,12000,'Current');
 
 
+-----------------------------------------------------postpaidaccount-------------------------------------------------------------------
+insert into postpaidaccount values(9553306407);
+
+insert into postpaidaccount values(9553306433);
+
+insert into postpaidaccount values(9553306443);
+
+insert into postpaidaccount values(9553306434);
+
+insert into postpaidaccount values(9553306400);
+
+insert into postpaidaccount values(9553306409);
+
+insert into postpaidaccount values(9553306404);
+
+insert into postpaidaccount values(9553306401);
+
+insert into postpaidaccount values(9553306403);
+
+insert into postpaidaccount values(9553306402);
+
 
 
 
