@@ -133,5 +133,30 @@ INSERT INTO SALARY values(30009,2560,1900,1809,6500,309,700,909,2009,65000,83509
 
 
 
+-----------------------------------------------------------------------------------------------------------------------
+insert into Associate
+	values('A101',2000,'Abhi','Kaush','ECE','Con','ADGFD0213L','ak101@gmail.com');
+insert into Associate
+	values('B101',2000,'Sesh','Sai','CSE','Sr.Con','SGHAS1356P','ss102@gmail.com');
+insert into Associate
+	values('C101',2000,'Raghav','Venkat','EEE','Asst.Con','LKAHG0251I','rv103@gmail.com');
+insert into Associate
+	values('D101',2000,'Sam','Laksh','PIE','Manager','YHGUI4523K','sl104@gmail.com');
+insert into Associate
+	values('E101',2000,'Krish','Ram','MME','Asst.Manager','RTYWF0154D','kr105@gmail.com');
+insert into Associate
+	values('F101',2000,'Sraavs','Maddy','EIE','Sr.Manager','OPDFS4502G','sm106@gmail.com');
+insert into Associate
+	values('G101',2000,'Hari','Priya','FAB','Clerk','AFHGY0164T','hp107@gmail.com');
+insert into Associate
+	values('H101',2000,'Goku','Kakarrot','CIVIL','Dean','RTAOS0780B','gk108@gmail.com');
+insert into Associate
+	values('I101',2000,'Vegeta','Saiyan','ME','Asst.Dean','PHIOS4589A','vs109@gmail.com');
+insert into Associate
+	values('I101',2000,'Ash','Ketchum','FD','P.Master','SCFDR0549P','ak110@gmail.com');
+
+
+
+
 
 
