@@ -50,7 +50,7 @@ netsalary number(10) not null);
  firstname varchar(20) not null,
  lastname varchar(20) not null,
  mobileno number(10) not null,
- emailid varchar(20) not null,
+ emailid varchar(30) not null,
  adharno number(20) not null,
  pancardno varchar(20) not null,
  dateofbirth date not null);
