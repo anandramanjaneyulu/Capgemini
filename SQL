@@ -1,1 +1,69 @@
 
+create table employee_master
+(employeeid number(10) not null,
+firstname varchar2(50) not null,
+lastname varchar2(50) npot null);
+
+
+alter table employee_master
+add mobileno number(20);
+
+
+----------------------------------------------------------------------------PayRoll--------------------------------------------------------------------------
+
+create table bankdetails
+(accountnumber number(20) not null,
+bankname varchar(20) not null,
+ifsccode varchar(20) not null)
+
+
+create table Salary
+(basicsalary number(10) not null,
+hra number(10) not null,
+conveyenceallowance number(10) not null,
+otherallowance number(10) not null,
+personalallowance number(10) not null,
+monthlytax number(10) not null,
+epf number(10) not null,
+companypf number(10) not null,
+gratuity number(10) not null,
+grosssalary number(10) not null,
+netsalary number(10) not null);
+
+
+
+-------------------------------------------------------------------------------------Banking-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+ create table customer
+ (customerid number(10) not null,
+ firstname varchar(20) not null,
+ lastname varchar(20) not null,
+ mobileno number(10) not null,
+ emailid varchar(20) not null,
+ adharno number(20) not null,
+ pancardno number(20) not null,
+ dateofbirth date not null);
+
+
+create table address
+(city varchar(10) not null,
+state varchar(10) not null,
+pincode number(10) not null,
+country varchar(10) not null);
+
+
+create table account
+(accountno number(20) not null,
+accountbalance number(10) not null,
+accounttype varchar(10) not null);
+
+
+
+
+create table transaction
+(transactionid number(20) not null,
+timestamp number not null,
+amount number(10) not null,
+transactiontype varchar(10) not null,
+transactionlocation varchar(10) not null,
+modeoftransaction varchar(10) not null,
+transactionstatus  varchar(10) not null);
