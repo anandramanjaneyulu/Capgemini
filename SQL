@@ -244,9 +244,26 @@ insert into postpaidaccount values(9553306404);
 
 insert into postpaidaccount values(9553306401);
 
+
+----------------------------------------------Plan--------------------------------------------------------------------------
+insert into plan values(101,150,50,50,10,10,150,0.15,0.50,1,2,0.60);
+insert into plan values(102,200,50,50,20,10,150,0.15,0.50,1,2,0.60);
+insert into plan values(103,250,100,50,20,20,150,0.15,0.45,1,2,0.60);
+insert into plan values(104,300,100,100,25,20,250,0.1,0.45,1,2,0.60);
+insert into plan values(105,350,100,100,30,25,250,0.1,0.45,1,2,0.60);
+insert into plan values(106,400,150,100,30,30,250,0.1,0.40,1,2,0.60);
+insert into plan values(107,450,150,150,35,30,350,0.05,0.40,1,2,0.60);
+insert into plan values(108,500,200,150,35,35,350,0.05,0.35,1,2,0.60);
+insert into plan values(109,550,200,200,40,35,500,0.05,0.35,1,2,0.60);
+insert into plan values(110,600,250,200,40,40,500,0.05,0.30,1,2,0.60);
+
+
+
 insert into postpaidaccount values(9553306403);
 
 insert into postpaidaccount values(9553306402);
+
+
 
 
 
