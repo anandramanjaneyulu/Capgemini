@@ -85,6 +85,10 @@ stdsmsrate number(20) not null,
 internetdatausagerate number(20) not null);
 
 
+create table postpaidaccount
+(mobileno number(10) not null);
+
+
 
 
 
