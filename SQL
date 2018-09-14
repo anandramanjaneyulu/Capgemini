@@ -73,7 +73,7 @@ accounttype varchar(10) not null);
 
 create table transaction
 (transactionid number(20) not null,
-timestamp timestamp not null,
+timestamp VARCHAR2(30) not null,
 amount number(10) not null,
 transactiontype varchar(10) not null,
 transactionlocation varchar(10) not null,
@@ -262,6 +262,23 @@ insert into plan values(110,600,250,200,40,40,500,0.05,0.30,1,2,0.60);
 insert into postpaidaccount values(9553306403);
 
 insert into postpaidaccount values(9553306402);
+
+
+
+
+insert into transaction(789456123012,2018/9/12 9:23:46,10000,'CARD','PUNE','IMPS','APPROVED');
+insert into transaction(897456123023,2018/9/1 4:3:46,45000,'UPI','MUMBAI','ONLINE BANKING','PENDING');
+insert into transaction(986541237812,2018/9/2 9:23:46,12000,'DEPOSIT','CHENNAI','RTGS','APPROVED');
+insert into transaction(456789445666,2018/08/2 9:03:46,52000,'POS','PUNE',IMPS','PENDING');
+insert into transaction(456789445566,2018/07/12 9:23:4616000,'CARD','CHENNAI','IMPS','APPROVED','PENDING');
+insert into transaction(456789445126,2018/9/12 9:23:46,51000,,WITHDRAWL','MUMBAI','RTGS','PENDING');
+insert into transaction(456789445786,2018/9/12 9:23:06,40000,'UPI','PUNE','RTGS','APPROVED');
+insert into transaction(456789444566,2018/9/12 19:23:46,40000,'POS','MUMBAI','RTGS','PENDING');
+insert into transaction(456789445894,2018/9/02 9:23:46,10120,'CARD','MUMBAI','IMPS','APPROVED');
+insert into transaction(456789444566,2018/9/12 07:23:46,40000,'POS','MUMBAI','RTGS','PENDING');
+
+
+
 
 
 
