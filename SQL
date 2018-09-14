@@ -168,7 +168,7 @@ insert into Associate
 	values('I101',2000,'Ash','Ketchum','FD','P.Master','SCFDR0549P','ak110@gmail.com');
 
 -----------------------------------------------------------customer details-------------------------------------------------
-insert into customer values(1,'subhash','g',9553306410,'subhash@capgemini.com',307730456548,'ABCDE1234F','1997-08-30');
+insert into customer values(1,'subhash','g',9553306410,'subhash@capgemini.com',307730456548,'ABCDE1234F',TO_DATE('1997/08/30', 'yyyy/mm/dd'));
 
 insert into customer values(2,'raj','k',9553306411,'raj@capgemini.com',307730456549,'ABCDE1235F','1997-07-30');
 
