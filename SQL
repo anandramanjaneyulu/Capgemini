@@ -1,4 +1,5 @@
-select student_name,case when (to_char(student_dob,DY) ='Sat' or to_char(student_dob,DY)='Sun') then to_char(student_dob,MONTH dd yyyy) else student_dob end as 'dob' from student_master
+select student_name,case when (to_char(student_dob,'day') like '%saturday%' or to_char(student_dob,'day') like '%sunday%') then to_char(student_dob,MONTH dd yyyy) else student_dob end as 'dob' 
+from student_master
 ---------------------------------------------------
 create table employee_master
 (employeeid number(10) not null,
