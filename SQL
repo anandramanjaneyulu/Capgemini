@@ -1,5 +1,6 @@
-select to_char(to_date(to_char(next_day(last_day(sysdate)-interval '7' day,'FRIDAY'),'dd'),'j'),'jsp') || ' of ' ||to_char(sysdate,'month')||','||to_char(sysdate,'yyyy')
-from dual;
+select student_code,student_name,case when dept_code=20 then 'Electricals'
+                                    when dept_code=30 then 'Electronics'
+            else 'others' end as "deptname" from student_master;
 ---------------------------------------------------
 create table employee_master
 (employeeid number(10) not null,
