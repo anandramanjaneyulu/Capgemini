@@ -1,6 +1,6 @@
-select dept_code,sum(staff_sal) as "sal" from staff_master
-where  mgr_code is not null
-group by dept_code
+select dept_code,sum(staff_sal) from staff_master
+where staff_code not in (select mgr_code from staff_master)
+group by  dept_code
 having sum(staff_sal)>20000;
 ---------------------------------------------------
 create table employee_master
