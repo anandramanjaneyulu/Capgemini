@@ -2,6 +2,18 @@ select dept_code,sum(staff_sal) from staff_master
 where staff_code not in (select mgr_code from staff_master)
 group by  dept_code
 having sum(staff_sal)>20000;
+
+
+
+1)
+
+select staff_name,d.dept_code,dept_name,staff_sal
+from staff_master s inner join department_master d on s.dept_code=d.dept_code
+where s.staff_sal >20000;
+
+
+
+
 ---------------------------------------------------
 create table employee_master
 (employeeid number(10) not null,
