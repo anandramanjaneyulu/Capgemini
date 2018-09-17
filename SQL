@@ -1,4 +1,5 @@
-next_day(last_day(sysdate)-interval '7' day,'FRIDAY')
+select to_char(to_date(to_char(next_day(last_day(sysdate)-interval '7' day,'FRIDAY'),'dd'),'j'),'jsp') || ' of ' ||to_char(sysdate,'month')||','||to_char(sysdate,'yyyy')
+from dual;
 ---------------------------------------------------
 create table employee_master
 (employeeid number(10) not null,
