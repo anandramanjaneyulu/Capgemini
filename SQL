@@ -1,5 +1,4 @@
-select student_name,case when (to_char(student_dob,'day') like '%saturday%' or to_char(student_dob,'day') like '%sunday%') then to_char(student_dob,MONTH dd yyyy) else student_dob end as 'dob' 
-from student_master
+next_day(last_day(sysdate)-interval '7' day,'FRIDAY')
 ---------------------------------------------------
 create table employee_master
 (employeeid number(10) not null,
