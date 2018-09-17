@@ -1,6 +1,7 @@
-select student_code,student_name,case when dept_code=20 then 'Electricals'
-                                    when dept_code=30 then 'Electronics'
-            else 'others' end as "deptname" from student_master;
+select dept_code,sum(staff_sal) as "sal" from staff_master
+where  mgr_code is not null
+group by dept_code
+having sum(staff_sal)>20000;
 ---------------------------------------------------
 create table employee_master
 (employeeid number(10) not null,
