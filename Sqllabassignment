@@ -156,6 +156,44 @@ from book_master
 group by book_pub_author
 having count(*)>1);
 
+9)
+select student_code,student_name,dept_name from student_master a
+join department_master d on a.dept_code=d.dept_code
+where a.dept_code=
+(select dept_code from
+(select dept_code,count(*) as tot
+from student_master
+group by dept_code
+order by tot desc)c
+where rownum =1
+);
+
+10)
+select staff_code,staff_name,dept_name,design_name from staff_master a
+join designation_master de on de.design_code=a.design_code
+join department_master d on d.dept_code=a.dept_code
+where months_between(sysdate,hiredate)<=3;
+
+11)
+select a.staff_name,count(*) from staff_master a
+join staff_master d on a.staff_code=d.mgr_code
+group by a.staff_name;
+
+13)
+select a.dept_code,a.dept_name,a.stu+b.sta as total from (select d.dept_code,d.dept_name,count(*) as stu from student_master s
+join department_master d on s.dept_code=d.dept_code
+group by d.dept_code,d.dept_name) a
+left outer join
+(select d.dept_code,d.dept_name,count(*) as sta from staff_master s
+join department_master d on s.dept_code=d.dept_code
+group by d.dept_code,d.dept_name
+)b on a.dept_code=b.dept_code and a.dept_name=b.dept_name;
+
+
+check;;;;;
+
+
+
 
 
 
