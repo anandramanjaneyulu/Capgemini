@@ -141,6 +141,23 @@ from staff_master s inner join staff_master m on m.staff_code=s.mgr_code inner j
 
 
 
+6)
+select staff_code,staff_name,staff_sal
+from staff_master
+where staff_sal<(select avg(staff_sal)
+from staff_master);
+
+7)
+select book_pub_author,book_name
+  from book_master
+  where book_pub_author in
+(select book_pub_author
+from book_master
+group by book_pub_author
+having count(*)>1);
+
+
+
 
 
 
