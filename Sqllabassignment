@@ -1,0 +1,180 @@
+
+--------------------------------------------Data Query Language------------------------------------------------
+
+
+
+
+1)
+select staff_name,design_code
+from staff_master
+where hiredate<'01-jan-03' and staff_sal between 12000 and 25000;
+
+
+2)
+select staff_code,staff_name,dept_code
+from staff_master
+where round(months_between(sysdate,hiredate)/12) >=18
+order by hiredate;
+
+3)
+select * from staff_master where mgr_code is null
+
+4)
+select *
+from book_master
+where book_pub_year between 2001 and 2004 and book_name like '%&%';
+
+5)
+select * from staff_master where staff_name like '%\_%' escape '\';
+
+
+-------------------------------------Single Row Functions:---------------------------------------------------
+
+
+1)
+select staff_name,'$' || LPAD(staff_sal,15,0) as Salary
+from staff_master;
+
+2)select student_name,to_char(student_dob,'month dd yyyy') as student_dateofbirth 
+from student_master 
+where to_char(student_dob,'day') like  '%saturday%' or to_char(student_dob,'day') like  '%sunday%' ;
+
+
+
+								or
+								
+
+select student_name,
+case when (to_char(student_dob,'day') like '%saturday%' or to_char(student_dob,'day') like '%sunday%') then to_char(student_dob,'MONTH dd yyyy') 
+else to_char(student_dob,'dd-month-yyyy') 
+end  as dob
+from student_master;
+								
+
+3)
+select staff_name,round(months_between(sysdate,hiredate)) as "Months Worked"
+from staff_master
+order by hiredate;
+
+
+4)
+select *
+from staff_master
+where to_char(hiredate,'dd') between 1 and 15 and to_char(hiredate,'month') like '%december%';
+
+
+
+5)
+select staff_name,staff_sal,
+case
+when staff_sal >=50000 then 'A'
+when staff_sal >=25000 and staff_sal<50000 then 'B'
+when staff_sal >=10000 and staff_sal<25000 then 'C'
+else 'D'
+end Grade
+from staff_master;
+
+
+6)***
+select staff_name,hiredate,to_char(hiredate,'day') as Day
+from staff_master
+order by to_char(hiredate,'d');
+
+7)
+select instr('mississippi','i',2,3) from dual;
+
+8)
+select (to_char(to_date(to_char(next_day(last_day(sysdate)-interval '7' day,'FRIDAY'),'dd'),'j'),'jsp') || ' of ' ||to_char(sysdate,'month')||','||to_char(sysdate,'yyyy')) as "PAY DATE"
+from dual;
+
+
+9)
+select student_code,student_name,
+case 
+when dept_code=20 then 'Electricals'
+when dept_code=30 then 'Electronics'
+else 'others' 
+end as "deptname" 
+from student_master;
+
+
+
+
+--------------------------------------------------------------------------------Group By functions-----------------------------------------------------------------------------------
+
+1)
+select max(staff_sal) as Maximum,min(staff_sal) as Minimum,sum(staff_sal) as Total,round(avg(staff_sal)) as Average
+from staff_master
+group by dept_code;
+
+
+2)
+select dept_code,count(*) as total_number_of_managers
+from staff_master
+group by dept_code;
+
+
+3)
+select dept_code,sum(staff_sal) as "sal" from staff_master
+where  mgr_code is not null
+group by dept_code
+having sum(staff_sal)>20000;
+
+
+
+
+
+-------------------------------------------------------------------------Joins and SubQueries---------------------------------------------------------------------------------------------------------------------------------------
+
+
+1)
+select staff_name,d.dept_code,dept_name,staff_sal
+from staff_master s inner join department_master d on s.dept_code=d.dept_code
+where s.staff_sal >20000;
+
+
+
+2)
+
+select s.staff_code,s.staff_name,dm.dept_name,s.mgr_code,m.staff_name as manager_name
+from staff_master s inner join staff_master m on m.staff_code=s.mgr_code inner join department_master dm on s.dept_code=dm.dept_code;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
