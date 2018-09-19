@@ -194,8 +194,126 @@ check;;;;;
 
 
 
+-------------------------------------------------------------charan------------------------------------------------------------------------
+4(
+create table customer(
+customerId number(5),
+cust_name varchar2(20),
+ADDRESS1 VARCHAR2(30),
+ADDRESS2 VARCHAR2(30));
 
+alter table customer modify cust_name varchar2(30); 
+alter table customer rename column cust_name to customer_name;
 
+alter table customer add gender varchar2(1);
+alter table customer add Age Number(3);
+alter table customer add PhoneNo Number(10);
+alter table customer to Cust_Table;
+
+insert into Cust_table
+values(1000,'Allen','#115Chicago','#115Chicago','M',25,7878776);
+insert into Cust_table
+values(1001,'George','#116France','#116France','M',25,434524);
+insert into Cust_table
+values(1002,'Becker','#114Newyork','#114Newyork','M',45,431525);
+
+Alter table Cust_table
+add Constraint CustId_prim primary key(CustomerId);
+
+insert into Cust_table
+values(1002,'john','#115Chicago','#115Chicago','M',45,431525);
+
+alter table cust_table
+Disable constraint CustId_prim;
+
+insert into Cust_table
+values(1002,'Becker','#114Newyork','#114Newyork','M',45,431525);
+insert into Cust_table
+values(1003,'Nanapatekar','#115India','#115India','M',45,431525);
+
+alter table cust_table
+enable constraint CustId_prim;
+
+alter table cust_table
+drop constraint CustId_prim;
+insert into Cust_table
+values(1002,'Becker','#114Newyork','#114Newyork','M',45,431525,15000.50);
+insert into Cust_table
+values(1003,'Nanapatekar','#115India','#115India','M',45,431525,20000.50);
+
+Truncate table cust_table;
+
+Alter table cust_table
+Add Email varchar2(30);
+
+Alter table cust_table
+drop column Email;
+
+create table Suppliers(
+SuppId number(5),
+Sname varchar2(20),
+ADDRESS1 VARCHAR2(30),
+ADDRESS2 VARCHAR2(30),
+Phoneno number(10));
+
+create table customer_master(
+customerId number(5),
+cust_name varchar2(20) not null,
+ADDRESS1 VARCHAR2(30) not null,
+ADDRESS2 VARCHAR2(30),
+Gender Varchar2(1),
+Age number(3),
+PhoneNo Number(10),
+Constraint CustId_PK Primary key (CustomerId));
+
+Create table AccountsMaster
+(CustomerId Number(5),
+AccountNumber Number(10,2),
+AccountType Char(3),
+LedgerBAlance Number(10,2) Not null,
+Constraint Acc_pk primary key(AccountNumber));
+
+Alter table AccountsMaster
+Add constraint Cust_acc foreign key(CustomerId) references Customer_Master(CustomerID);
+
+insert into Customer_master
+values(1000,'Allen','#115Chicago','#115Chicago','M',25,7878776);
+insert into Customer_master
+values(1001,'George','#116France','#116France','M',25,434524);
+insert into Customer_master
+values(1002,'Becker','#114Newyork','#114Newyork','M',45,431525);
+
+Alter table AccountsMaster
+Add constraint ck_ac check (Accounttype ='NRI' or Accounttype='IND');
+
+Alter table AccountsMaster
+Add constraint min_bal check (LedgerBalance>5000);
+
+Alter table AccountsMaster
+Add constraint Cust_acc foreign key(CustomerId) references Customer_Master(CustomerID)
+on delete cascade;
+
+create table AccountDetails as select * from AccountsMaster;
+
+create view Acc_view as select a.CustomerId Customercode,c.Cust_Name AccountHolderName,
+a.AccountNumber AccountNumber,a.AccountType Type,a.ledgerBalance Balance from AccountsMaster a
+join customer_master c on a.customerid=c.customerid;
+
+create view vAccs_Dtls as select * from AccountsMaster 
+where ledgerbalance>10000 and AccountType ='IND'with check option;
+
+(create sequence seq_dept
+start with 40
+increment by 10
+maxvalue 200
+no cycle
+cache;)
+
+create synonym synEmp for emp;
+
+select * from synEmp;
+
+create index idx_emp_hiredate on Employee(Hiredate);)
 
 
 
