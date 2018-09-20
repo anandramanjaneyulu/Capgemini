@@ -177,6 +177,33 @@ end;
 
 select * from user_errors where type='PROCEDURE'
 
+================================================================================================================================
+create or replace function associatecountfordepartment(
+depname in associate.department%type;
+return number is
+associatecount number(10) :=0;
+BEGIN
+SELECT COUNT(*) INTO ASSOCIATECOUNT FROM ASSOCIATE WHERE DEPARTMENT=DEPNAME;
+END;
+BEGIN
+DBMS_OUTPUT.PUTLINE(ASSOCIATECOUNTFORDEPARTMENT('YTP'));
+END;
+===============================================================================================================
+create table associatelog(
+logmessage varchar2(50);
+INSERTDATE DATE
+)
+/
+
+CREATE OR REPLACE TRIGGER
+INSERT_ASSOCIATE_TRIGGER
+AFTER INSERT ON ASSOCIATE FOR EACH ROW
+BEGIN
+INSERT INTO ASSOCIATELOG VALUES('RECORD INSERTED',SYSDATE);
+END;
+/
+
+
 
 
 
