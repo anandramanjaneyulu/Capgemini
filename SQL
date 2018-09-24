@@ -293,6 +293,52 @@ insert into transaction values(456789444566,'2018/09/12 19:23:46',40000,'POS','M
 insert into transaction values(456789445894,'2018/09/02 9:23:46',10120,'CARD','MUMBAI','IMPS','APPROVED');
 insert into transaction values(456789444566,'2018/09/12 07:23:46',40000,'POS','MUMBAI','RTGS','PENDING');
 
+=====================================================================exam====================================================
+
+create table electricity_bill
+(billno number,
+consumerno number,
+billamount number ,
+paidbilldate Date);
+
+
+
+alter table electricity_bill
+add primary key(billno);
+alter table electricity_bill
+add foreign key(consumerno) references electricity_consumer;
+
+
+insert into electricity_bill values(101,1001,440.45,'25-May-2017');
+insert into electricity_bill values(102,1002,690,'02-Jun-2018');
+insert into electricity_bill values(103,1001,675,'05-Aug-2017');
+insert into electricity_bill values(104,1004,678,'05-Aug-2000');
+insert into electricity_bill values(105,1005,643,'08-JAN-2001');
+insert into electricity_bill values(106,1004,900,'08-FEB-2010');
+insert into electricity_bill values(107,1003,842,'12-May-2001');
+insert into electricity_bill values(108,1002,421,'18-Sep-2009');
+insert into electricity_bill values(109,1005,346,'20-Aug-2005');
+insert into electricity_bill values(110,1005,342,'26-July-2001');
+
+create table electricity_Consumer
+(ConsumerNo number(8),
+ConsumerName varchar2(20) not null,
+emailid varchar2(35),
+unitsConsumed number);
+
+
+
+alter table electricity_consumer
+add primary key(Consumerno);
+
+
+insert into electricity_consumer values(1001,'Seema Joshi','Seema.joshi@gmail.com',250);
+insert into electricity_consumer values(1002,'Amey Joshi','Amey.j@cg.com',345);
+insert into electricity_consumer values(1003,'Pravin','Pravin.t@cg.com',457);
+insert into electricity_consumer values(1004,'Manoj Kulkarni','manoj@gmail.com',780);
+insert into electricity_consumer values(1005,'Shrikant Shinde','Shrikant Shinde@gmail.com',90);
+insert into electricity_consumer values(1006,'Mahesh B','bMahesh@Yahoo.com',720);
+
 
 
 
