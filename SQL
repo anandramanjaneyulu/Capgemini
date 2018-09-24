@@ -320,6 +320,7 @@ insert into electricity_bill values(108,1002,421,'18-Sep-2009');
 insert into electricity_bill values(109,1005,346,'20-Aug-2005');
 insert into electricity_bill values(110,1005,342,'26-July-2001');
 
+
 create table electricity_Consumer
 (ConsumerNo number(8),
 ConsumerName varchar2(20) not null,
@@ -351,9 +352,42 @@ where UnitsConsumed = (select max(UnitsConsumed) from electricty_consumer)
 ;
 
 
-select consumerno,count(consumerno)
-from electricity_bill
-group by consumerno
-having count(*)>1;
+select consumerNo from(select consumerNo,count(distinct BillNo) as "bill" from electricity_bill
+group by consumerNo)
+where bill>1;
+
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Ele_con" xmlns:tns="http://www.example.org/Ele_con" elementFormDefault="qualified">
+<element name="electricity_consumer">
+	<complexType>
+		<sequence>
+			<element name="Consumer" minOccurs="1" maxOccurs="unbounded">
+			<complexType>
+			<sequence>
+			<element name="ConsumerName">
+			<simpleType>
+				<restriction base="string">
+				<minLength value="1"/>
+				</restriction>
+			</simpleType>
+			</element>
+			<element name ="emailId" type="string"/>
+			<element name ="UnitsConsumed" type="int"/>
+			</sequence>
+			<attribute name="ConsumerNo" type="int" use="required"/>
+			</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>
 
 
+<?xml version="1.0" encoding="UTF-8"?>
+<tns:electricity_consumer xmlns:tns="http://www.example.org/Ele_con" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/Ele_con ELECTRICITY.xsd ">
+  <tns:Consumer ConsumerNo="0">
+    <tns:ConsumerName>tns:ConsumerName</tns:ConsumerName>
+    <tns:emailId>tns:emailId</tns:emailId>
+    <tns:UnitsConsumed>0</tns:UnitsConsumed>
+  </tns:Consumer>
+</tns:electricity_consumer>
