@@ -1,0 +1,47 @@
+select * from electricity_Bill where type='PROCEDURE' and name='INSERT_CUSTOMER'
+
+create or replace procedure cal(
+BillNo in electricity_Bill.BillNo%type;
+ConsumerNo in electricity_Bill.ConsumerNo%type;
+BillAmount in electricity_Bill.BillAmount%type;
+billPaidDate in electricity_Bill.billPaidDate%type;)
+is
+begin
+
+insert into electricity_bill values(BillNo,ConsumerNo,BillAmount,billPaidDate);
+commit;
+end;
+
+declare
+         cursor cName is select * from electricity_Bill where ConsumerNo=&cno;
+		 consumer electricity_bill%ROWTYPE;
+		 con electricity_consumer%rowtype;
+		 consumer_not_found exception;
+		 
+		 
+begin
+      if cName%isopen
+         then
+             null;
+      else
+          open cName;
+       end if;
+       fetch cName into consumer;
+         if cName%NOTFOUND
+               then raise consumer_not_found;
+           
+         else
+               {
+			      if(con.UnitsConsumed<=100)
+				         cName.BillAmount=con.UnitsConsumed*2.96;
+					else
+                         cName.BillAmount=100*2.96+(con.UnitsConsumed-100)*5.56;					
+			   
+			   }		 
+          end if;
+
+exception
+         when consumer_not_found
+         then
+                DBMS_OUTPUT.PUT_LINE('Consumer Doesn not Exist');
+end;				
