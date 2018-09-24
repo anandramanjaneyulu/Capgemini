@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/question" xmlns:tns="http://www.example.org/question" elementFormDefault="qualified">
+<element name="ConsumerData">
+<complexType>
+<sequence>
+
+<element name="ConsumerNo"  type="integer" use="required"></element>
+<element name="ConsumerName"  type="string" use="required"></element>
+<element name="emailId"  type="string" use="required"></element>
+<element name="UnitsConsumed"  type="integer" use="required"></element>
+
+</sequence>
+
+
+
+</complexType>
+
+
+</element>
+
+
+</schema>
