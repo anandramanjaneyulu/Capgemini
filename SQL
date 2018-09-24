@@ -344,6 +344,15 @@ insert into electricity_consumer values(1006,'Mahesh B','bMahesh@Yahoo.com',720)
 
 
 
+select ConsumerNo,ConsumerName from electricity_consumer
 
+where UnitsConsumed = (select max(UnitsConsumed) from electricty_consumer)
+
+;
+
+
+select consumerNo from(select consumerNo,count(distinct BillNo) as "bill" from electricity_bill
+group by consumerNo)
+where bill>1;
 
 
