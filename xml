@@ -20,3 +20,31 @@
 
 
 </schema>
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.example.org/Ele_con" xmlns:tns="http://www.example.org/Ele_con" elementFormDefault="qualified">
+<element name="electricity_consumer">
+	<complexType>
+		<sequence>
+			<element name="Consumer" minOccurs="1" maxOccurs="unbounded">
+			<complexType>
+			<sequence>
+			<element name="ConsumerName">
+			<simpleType>
+				<restriction base="string">
+				<minLength value="1"/>
+				</restriction>
+			</simpleType>
+			</element>
+			<element name ="emailId" type="string"/>
+			<element name ="UnitsConsumed" type="int"/>
+			</sequence>
+			<attribute name="ConsumerNo" type="int" use="required"/>
+			</complexType>
+			</element>
+		</sequence>
+	</complexType>
+</element>
+</schema>
+
