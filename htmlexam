@@ -1,0 +1,104 @@
+<html>
+<head>
+
+<script type="text/javascript">
+
+function calelectricity()
+{
+ 
+var units=Number((document.getElementById("units").value));
+var custname=document.getElementById("custname").value;
+var custnum=document.getElementById("custno").value;
+var email=document.getElementById("email").value;
+//var custname=document.getElementById("custname").value;
+
+
+
+var x,y;
+if(units<100)
+{
+
+x=units*2.96;
+
+
+}
+else
+{
+y=units-100;
+x=100*2.96;
+x=x+(y*5.56);
+}
+var p='<br>'
+alert('Consumer No: '+custnum+'\n'+'Consumer Name: '+custname+'\n'+'Email Address: '+email+'\n'+'Number of units: '+units+'\n'+'Amount to be paid: '+x);
+}
+
+
+
+</script>
+
+
+
+
+
+
+<style type="text/css">
+form {
+  
+  margin: 0 auto;            /* Just to center the form on the page */
+  width: 480px;
+
+  padding: 1em;             /* To see the outline of the form */
+  border: 1px;
+  border-style:double;
+ 
+}
+
+
+
+</style>
+</head>
+
+
+<body>
+
+<form style="text-align:center" onsubmit="calelectricity()">
+<h1 style="text-align:center">Electricity Consumer Form</h1>
+<table cellspacing="10">
+<tr>
+<td>Consumer No:</td><td><input type="number" name="custno" id="custno" minlength=maxlength="8" pattern="{8}" required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+<td>Cosumer Name:</td><td><input type="text"  name="custname" id="custname" pattern="[A-Z]{1}[A-z]{2,}" required></td>
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr>
+
+<td>Email Address:</td><td><input type="email" name="emailaddress" id="email" required></td>
+
+
+</tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr><td>Number of Units:</td><td><input type="number" name="units" id="units" required></td></tr>
+<tr> <td>&nbsp;</td> </tr>
+<tr><td colspan="6" align="center"><input type="submit" value="Calculate Electricity Charges and Display"></td></tr>
+
+
+
+</table>
+
+
+
+
+</form>
+
+
+
+</body>
+
+
+
+
+
+
+</html>
